@@ -1,0 +1,175 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    display: flex; /* Turns header into a flex container */
+    justify-content: space-between; /* Spaces h1 and ul elements apart */
+    flex-wrap: wrap; /* Wraps elements depending on screen size */
+    background-color:lightblue;
+}
+
+header h1 {
+    padding: 10px 0px 15px 50px; /* Space between h1 element and margins */
+}
+
+header nav ul {
+    display: flex; /* Turns the Nav list into a flex container */
+    flex-wrap: wrap; /* Wraps elements to fit screen */
+    justify-content: flex-end; /* Pushes items to end of main axix, in this case a row, so to the right */
+    align-items: center; /* Align items (centered) along cross axis */
+    list-style: none; /* Removes bullet points */
+}
+
+header nav ul li {
+    font-size: 1.8vw; /* Adjusts font size for screen size */
+    padding: 10px 15px; /* Padding to center Nav Elements */
+    margin: 5px 10px; /* Adds margin to top and bottom */
+}
+
+header a {
+    text-decoration: none; /* Removes link underline */
+}
+/* End Header */
+
+/* Body Styling */
+.avatar img {
+    max-width: 500px; /* This ensures the image doesn't exceed its container */
+    height: auto; /* This maintains the image's aspect ratio */
+}
+
+.avatar {
+    background-image: url(https://picsum.photos/1000/1000); /* Placeholder background image */
+    background-size: cover; /* Scale the background image to cover the entire element */
+    background-attachment: fixed; /* Fix the background position */
+    background-position: 50%; /* Center the background horizontally */
+}
+
+.section {
+    background-color: coral; /* Set a coral background color */
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Wrap items to the next line if they overflow */
+    align-items: center; /* Vertically align items */
+}
+
+.about-me-container {
+    display: flex; /* Use flexbox layout */
+    flex-direction: row; /* Set row direction for child elements */
+    justify-content: space-between; /* Distribute space evenly between child elements */
+    align-items: center; /* Vertically align items */
+}
+
+.about-me-title,
+.work-title, 
+.contact-me-title {
+    background-color:lightblue;
+}
+
+h2 {
+    font-size: 2vw; /* Set font size relative to viewport width */
+    padding: 10px 10px 15px 50px; /* Set top, right, bottom, left padding */
+}
+
+.flex-container {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Set column direction for child elements */
+    flex-wrap: wrap; /* Wrap items to the next line if they overflow */
+    justify-content: space-around; /* Distribute space evenly around child elements */
+    align-items: center; /* Vertically align items */
+    margin: 0 auto; /* Center the container horizontally */
+    width: 90%; /* Set the width of the container */
+}
+
+.main-project {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Wrap items to the next line if they overflow */
+    justify-content: center; /* Center child elements horizontally */
+    align-items: center; /* Vertically align items */
+    height: 550px; /* Set the height of the container */
+    width: 100%; /* Set the width of the container */
+}
+
+.horiseon-project {
+    background-image: url(../images/challenge-1.JPG); /* Set a background image */
+    background-size: cover; /* Scale the background image to cover the entire element */
+    width: 100%; /* Set the width of the container */
+    height: 500px; /* Set the height of the container */
+    position: relative; /* Set the positioning context for child elements */
+}
+
+.flex-container h3, .flex-container p {
+    background-color: lightseagreen; /* Set a light seagreen background color */
+    display: inline-block; /* Display elements as inline blocks */
+    text-align: start; /* Set the text alignment to the start (left) */
+    opacity: 85%; /* Set the opacity to 85% */
+    width: 50%; /* Set the width of the element */
+}
+
+.projects {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Wrap items to the next line if they overflow */
+    justify-content: space-around; /* Distribute space evenly around child elements */
+    align-items: center; /* Vertically align items */
+    flex-direction: row; /* Set row direction for child elements */
+    width: 100%; /* Set the width of the container */
+}
+
+.project-2,
+.project-3,
+.project-4,
+.project-5 {
+    background-image: url(https://picsum.photos/200/200); /* Placeholder image URL */
+    background-size: cover; /* Scale the background image to cover the entire element */
+    width: 45%; /* Set the width of each project card to 45% of the container */
+    height: 300px; /* Adjust the height as needed */
+    position: relative; /* Set the positioning context for child elements */
+    margin-bottom: 2%; /* Add space below each project card */
+    margin-right: .5%; /* Add space to the right of each project card */
+}
+
+
+.flex-container-2 {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Wrap items to the next line if they overflow */
+    justify-content: space-around; /* Distribute space evenly around child elements */
+    align-items: center; /* Vertically align items */
+    margin: 0 auto; /* Center the container horizontally */
+    width: 90%; /* Set the width of the container */
+}
+
+.flex-container-2 a {
+    font-size: 1.5vw; /* Set font size relative to viewport width for links */
+}
+
+footer h2, footer div {
+    text-align: center; /* Center align text within the footer */
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    section {
+      padding: 30px 15px; /* Adjust section padding on tablets and smaller screens */
+    }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    .section-title {
+      width: 95%; /* Set the width of section titles to 95% of the container */
+    }
+    .projects .project-2,
+    .projects .project-3,
+    .projects .project-4,
+    .projects .project-5 {
+        width: 100%; /* Display project cards in a single column on mobile phones and smaller screens */
+    }
+  
+    .section p {
+      width: 100%; /* Set the width of paragraph elements to 100% on small screens */
+    }
+}
+  
